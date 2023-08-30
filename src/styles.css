@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/InterRegular.woff") format("woff");
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main-color-font);
+}
+
+:root {
+  --main-background: #18181B;
+  --second-background: #27272A;
+  --header-background: #27272A;
+  --user-background: #27272A;
+  --color-line: #27272A;
+  --main-color-font: #A1A1AA;
+  --second-color-font: #FFFFFF;
+  --color-text-button: #FFFFFF;
+  --color-three: #7C3AED;
+  --color-active: #3F3F46;
+
+  --workspace-background: #FFFFFF;
+  --workspace-text-color: #52525B;
+
+
+
+  /*    Цвета для светлой темы    */
+
+  /*--main-background: #FFFFFF;
+  --second-background: #FFFFFF;
+  --header-background: #F9FAFB;
+  --user-background: #F4F4F5;
+  --color-line: #E5E7EB;
+  --main-color-font: #52525B;
+  --second-color-font: #7C3AED;
+  --color-text-button: #FFFFFF;
+  --color-three: #7C3AED;
+  --color-active: #EDE9FE;
+
+  --workspace-background: #3F3F46;
+  --workspace-background: #3F3F46;*/
+
+
+
+  --thumbBG: #3F3F46;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
