@@ -1,0 +1,543 @@
+.wrapper {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--main-background);
+  height: 100%;
+  min-width: 98px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+
+
+/* Стили для шапки бокового меню */
+
+.sidebar__logo {
+  display: none;
+}
+
+.sidebar__header {
+  background-color: var(--header-background);
+  padding: 24px 30px;
+  display: flex;
+}
+
+.sidebar__burger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.sidebar__burger svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/*   Стили для основной части бокового меню   */
+
+.sidebar__main {
+  width: 98px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 248px;
+}
+
+.sidebar__menu {
+  padding: 32px 0 24px;
+  width: 98px;
+  height: 248px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+
+
+
+/* Стили для списка меню в сайдбаре */
+
+.sidebar__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 36px;
+  margin: 0 auto;
+}
+
+.menu-sidebar {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.menu-sidebar__search {
+  width: 36px;
+  height: 36px;
+}
+
+.menu-sidebar__form {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.menu-sidebar__search-input {
+  background-color: transparent;
+  border: none;
+  display: none;
+  width: 100%;
+  color: var(--second-color-font);
+}
+
+.menu-sidebar__search-input:focus {
+  outline: none;
+}
+
+.menu-sidebar__item span {
+  display: flex;
+  align-items: center;
+}
+
+.menu-sidebar__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.menu-sidebar__item:first-child {
+  margin-bottom: 16px;
+  border: 1px solid #3F3F46;
+  border-radius: 4px;
+}
+
+.menu-sidebar__item--active {
+  display: block;
+  background-color: var(--color-active);
+  border-radius: 4px;
+}
+
+.menu-sidebar__item--active path {
+  stroke: var(--second-color-font);
+}
+
+.menu-sidebar__item--active span {
+  color: var(--second-color-font);
+}
+
+.menu-sidebar__link {
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+  color: var(--main-color-font);
+  text-decoration: none;
+}
+
+.menu-sidebar__link svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-sidebar__link span {
+  display: none;
+}
+
+.menu-sidebar__incoming {
+  position: relative;
+}
+
+.menu-sidebar__incoming::after {
+  content: url("../assets/images/marker.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+/*    Стили для списка проектов в боковом меню   */
+
+.sidebar__progects {
+  padding-top: 32px;
+}
+
+
+.progects__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 36px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progects__link {
+  display: flex;
+  padding: 8px;
+}
+
+.progects__link span {
+  display: none;
+}
+
+.progects__sub-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+/*   Стили для кнопки добавления проекта    */
+
+.sidebar__wrapper-button {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar__create {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: var(--color-three);
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 112px;
+}
+
+.sidebar__create img {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sidebar__create span {
+  color: var(--color-text-button);
+  font-size: 12px;
+  display: none;
+}
+
+.sidebar__create:hover {
+  background-color: #5d2bb3;
+}
+
+
+
+
+/*   Стили для секции пользователя в боковом меню   */
+
+.sidebar__user {
+  min-height: 88px;
+  width: 98px;
+  background-color: var(--user-background);
+  padding: 24px 29px;
+  position: fixed;
+  bottom: 0;
+}
+
+.sidebar__user img {
+  display: block;
+  border-radius: 50%;
+}
+
+.user-section__photo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.user-section__marker-status {
+  display: block;
+  background-image: url("../assets/images/status.svg");
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.user-section__name {
+  display: none;
+}
+
+.user-section__menu {
+  display: none;
+  cursor: pointer;
+}
+
+
+
+
+/* Стили для рабочей области*/
+
+.workspace {
+  padding: 20px;
+  width: calc(100% - 98px);
+  margin: 0 0 0 auto;
+  background-color: var(--workspace-background);
+  color: var(--workspace-text-color);
+}
+
+
+
+
+
+/* Стили для открытого меню*/
+
+.sidebar--open {
+  width: 100%;
+}
+
+.sidebar--open .sidebar__logo {
+  display: block;
+}
+
+.sidebar--open .sidebar__header {
+  padding: 24px 32px;
+}
+
+.sidebar--open .sidebar__burger {
+  margin-right: 16px;
+}
+
+.sidebar--open  .sidebar__list {
+  width: 289px;
+}
+
+.sidebar--open .menu-sidebar__link {
+  display: flex;
+  padding: 8px 16px;
+}
+
+.sidebar--open .menu-sidebar__link span {
+  display: flex;
+}
+
+.sidebar--open .incoming__count {
+  align-items: center;
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--color-text-button);
+  background-color: var(--color-three);
+  padding: 3px 4px;
+  border-radius: 50%;
+}
+
+.sidebar--open .sidebar__main {
+  width: 294px;
+}
+
+.sidebar--open .sidebar__menu {
+  width: 294px;
+}
+
+.sidebar--open .menu-sidebar__link svg {
+  margin-right: 8px;
+}
+
+.sidebar--open .menu-sidebar__search {
+  width: 289px;
+}
+
+.sidebar--open .menu-sidebar__form {
+  padding: 0 16px;
+}
+
+.sidebar--open .menu-sidebar__form svg {
+  margin-right: 8px;
+}
+
+.sidebar--open .menu-sidebar__search-input {
+  display: block;
+}
+
+.sidebar--open .progects__link span {
+  display: inline;
+}
+
+.sidebar--open .menu-sidebar__incoming::after {
+  content: '';
+}
+
+.sidebar--open .progects__sub-list {
+  display: block;
+}
+
+.sidebar--open .progects__list {
+  width: 294px;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.sidebar--open .progects__item {
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.sidebar--open .progects__link {
+  padding: 0;
+}
+
+.sidebar--open .progects__link svg {
+  margin-right: 8px;
+}
+
+.sidebar--open .sidebar__create {
+  width: 294px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar--open .sidebar__create img {
+  display: block;
+  margin: 0;
+  margin-right: 4px;
+}
+
+.sidebar--open .sidebar__create span {
+  display: block;
+}
+
+
+.sidebar--open .sidebar__user {
+  width: 342px;
+}
+
+.sidebar--open .user-section {
+  display: flex;
+}
+
+.sidebar--open .user-section__photo {
+  margin-right: 16px;
+}
+
+.sidebar--open .user-section__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 198px;
+  margin-right: 16px;
+}
+
+.sidebar--open .user-section__name strong,
+.sidebar--open .user-section__name span {
+  display: block;
+}
+
+.sidebar--open .user-section__name strong {
+  color: var(--second-color-font);
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar--open .user-section__menu {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.sidebar--open .user-section__menu svg {
+  display: block;
+
+}
+
+
+
+/* Стилизация скролла для списка проектов */
+
+.sidebar--open .progects__list::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar--open .progects__list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) transparent;
+}
+.sidebar--open .progects__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar--open .progects__list::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid transparent;
+}
+
+/* Стилизация скролла для меню сайдбара при маленьком экране */
+.sidebar__menu::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar__menu {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) transparent;
+}
+.sidebar__menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar__menu::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid transparent;
+}
+
+
+
+/*    Адаптив под разные значения ширины и длины экрана   */
+
+@media (min-width: 342px){
+  .sidebar--open {
+    width: 342px;
+  }
+
+  .sidebar--open .sidebar__list {
+    width: 294px;
+  }
+
+  .sidebar--open .menu-sidebar__search {
+    width: 294px;
+  }
+}
+
+
+@media(min-height: 600px) {
+  .sidebar__main {
+    height: 368px;
+  }
+
+  .sidebar__menu {
+    height: 368px;
+  }
+}
+
+
+@media (min-height: 720px) {
+  .sidebar__main {
+    height: 100%;
+  }
+
+  .sidebar__menu {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .sidebar--open .progects__list {
+    height: 130px;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,159 @@
+<div class="wrapper">
+  <section class="sidebar">
+    <h2 class="visually-hidden">Заголовок меню</h2>
+    <header class="sidebar__header">
+      <button class="sidebar__burger" type="button" (click)="openCloseMenu()">
+        <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4H22" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 12H22" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 20H22" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="sidebar__logo" src="../assets/images/logo-black-theme.svg" alt="Лепёхин">
+      <!-- Логотип для светлой темы -->
+      <!--<img class="sidebar__logo" src="../assets/images/logo-white-theme.svg" alt="Лепёхин">-->
+    </header>
+
+    <section class="sidebar__main">
+      <h2 class="visually-hidden">Главное меню</h2>
+      <div class="sidebar__menu">
+        <ul class="sidebar__list menu-sidebar">
+          <li class="menu-sidebar__item menu-sidebar__search">
+            <form action="#" class="menu-sidebar__form" method="post">
+              <label for="sidebar-search" class="visually-hidden">Поиск по сайдбару</label>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.5 17.5L13.875 13.875" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input class="menu-sidebar__search-input" id="sidebar-search" name="sidebar-search" type="text" placeholder="Search">
+            </form>
+          </li>
+          <li class="menu-sidebar__item menu-sidebar__item--active menu-sidebar__home" (click)="followLinkHome()">
+            <a class="menu-sidebar__link" routerLink="/home">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 7.50002L10 1.66669L17.5 7.50002V16.6667C17.5 17.1087 17.3244 17.5326 17.0118 17.8452C16.6993 18.1578 16.2754 18.3334 15.8333 18.3334H4.16667C3.72464 18.3334 3.30072 18.1578 2.98816 17.8452C2.67559 17.5326 2.5 17.1087 2.5 16.6667V7.50002Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.5 18.3333V10H12.5V18.3333" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li class="menu-sidebar__item menu-sidebar__incoming incoming" (click)="followLinkIncoming()">
+            <a class="menu-sidebar__link" routerLink="/incoming">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 10H13.3333L11.6666 12.5H8.33329L6.66663 10H1.66663" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.54163 4.25831L1.66663 9.99998V15C1.66663 15.442 1.84222 15.8659 2.15478 16.1785C2.46734 16.4911 2.89127 16.6666 3.33329 16.6666H16.6666C17.1087 16.6666 17.5326 16.4911 17.8451 16.1785C18.1577 15.8659 18.3333 15.442 18.3333 15V9.99998L15.4583 4.25831C15.3203 3.98064 15.1076 3.74696 14.8441 3.58355C14.5806 3.42014 14.2767 3.33348 13.9666 3.33331H6.03329C5.72322 3.33348 5.41935 3.42014 5.15583 3.58355C4.89231 3.74696 4.67961 3.98064 4.54163 4.25831V4.25831Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Входящие</span>
+              <span class="incoming__count">12</span>
+            </a>
+          </li>
+          <li class="menu-sidebar__item menu-sidebar__tasks" (click)="followLinkTasks()">
+            <a class="menu-sidebar__link" routerLink="/tasks">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.66663 5H17.5" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.66663 10H17.5" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.66663 15H17.5" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.5 5H2.50833" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.5 10H2.50833" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.5 15H2.50833" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Задачи</span>
+            </a>
+          </li>
+          <li class="menu-sidebar__item menu-sidebar__activity" (click)="followLinkActivity()">
+            <a class="menu-sidebar__link" routerLink="/activity">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 10H15L12.5 17.5L7.49996 2.5L4.99996 10H1.66663" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Активность</span>
+            </a>
+          </li>
+          <li class="menu-sidebar__item menu-sidebar__team" (click)="followLinkTeam()">
+            <a class="menu-sidebar__link" routerLink="/team">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.1667 17.5V15.8333C14.1667 14.9493 13.8155 14.1014 13.1904 13.4763C12.5653 12.8512 11.7174 12.5 10.8334 12.5H4.16671C3.28265 12.5 2.43481 12.8512 1.80968 13.4763C1.18456 14.1014 0.833374 14.9493 0.833374 15.8333V17.5" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.49996 9.16667C9.34091 9.16667 10.8333 7.67428 10.8333 5.83333C10.8333 3.99238 9.34091 2.5 7.49996 2.5C5.65901 2.5 4.16663 3.99238 4.16663 5.83333C4.16663 7.67428 5.65901 9.16667 7.49996 9.16667Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.1666 17.5V15.8333C19.1661 15.0948 18.9203 14.3773 18.4678 13.7936C18.0153 13.2099 17.3817 12.793 16.6666 12.6083" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.3334 2.60834C14.0504 2.79192 14.6859 3.20892 15.1397 3.7936C15.5936 4.37827 15.8399 5.09736 15.8399 5.8375C15.8399 6.57765 15.5936 7.29674 15.1397 7.88141C14.6859 8.46609 14.0504 8.88309 13.3334 9.06667" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Команда</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar__progects progects">
+          <ul class="progects__list">
+            <li class="progects__item">
+              <a class="progects__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.3333 15.8333C18.3333 16.2754 18.1577 16.6993 17.8451 17.0118C17.5326 17.3244 17.1087 17.5 16.6666 17.5H3.33329C2.89127 17.5 2.46734 17.3244 2.15478 17.0118C1.84222 16.6993 1.66663 16.2754 1.66663 15.8333V4.16667C1.66663 3.72464 1.84222 3.30072 2.15478 2.98816C2.46734 2.67559 2.89127 2.5 3.33329 2.5H7.49996L9.16663 5H16.6666C17.1087 5 17.5326 5.17559 17.8451 5.48816C18.1577 5.80072 18.3333 6.22464 18.3333 6.66667V15.8333Z" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Проекты</span>
+              </a>
+            </li>
+            <ul class="progects__sub-list">
+              <li class="progects__item">
+                <a class="progects__link">
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="8" height="8" rx="2" fill="#A855F7"/>
+                  </svg>
+                  <span>Дизайн</span>
+                </a>
+              </li>
+              <li class="progects__item">
+                <a class="progects__link">
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="8" height="8" rx="2" fill="#84CC16"/>
+                  </svg>
+                  <span>Веб</span>
+                </a>
+              </li>
+              <li class="progects__item">
+                <a class="progects__link">
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="8" height="8" rx="2" fill="#EC4899"/>
+                  </svg>
+                  <span>Редактура</span>
+                </a>
+              </li>
+            </ul>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar__wrapper-button">
+        <button class="sidebar__create">
+          <img src="../assets/images/plus.svg" alt="Создать запись">
+          <span>Создать проект</span>
+        </button>
+      </div>
+
+    </section>
+
+    <section class="sidebar__user user-section">
+      <h2 class="visually-hidden">Пользователь</h2>
+      <div class="user-section__photo">
+        <img src="../assets/images/avatar.jpg" alt="Аватар">
+        <span class="user-section__marker-status"></span>
+      </div>
+      <div class="user-section__name">
+        <strong>Михаил Воробьев</strong>
+        <span>Разрабочик</span>
+      </div>
+      <button class="user-section__menu" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </section>
+
+  </section>
+
+
+  <section class="workspace">
+    <router-outlet></router-outlet>
+  </section>
+</div>
